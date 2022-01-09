@@ -1,0 +1,161 @@
+@import './variaveis.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bgSite);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 100px 0;
+}
+.top-title {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 3rem;
+}
+.top-title h3 {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-bottom: 20px;
+}
+.top-title p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.top-title button {
+  font-size: 2rem;
+  background-color: var(--buttonColor);
+  color: var(--white);
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s all ease;
+  margin-top: 30px;
+}
+.top-title button:hover {
+  background-color: var(--title);
+  color: var(--white);
+}
+
+.top-img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Section cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-img {
+  width: 300px;
+  height: 200px;
+  background-color: var(--buttonColor);
+}
+.cards h1 {
+  font-size: 3.5rem;
+}
+.cards p {
+  font-size: 1.8rem;
+  text-align: center;
+  width: 280px;
+}
+
+/* Contact */
+.contact {
+  background-color: var(--bgSite);
+}
+.contact-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 50px;
+}
+.contact-flex form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 50px;
+  
+}
+.contact-flex form label {
+  width: inherit;
+  margin-top: 20px;
+}
+.contact-flex form label input {
+  width: inherit;
+  border-radius: 5px;
+  padding: 20px;
+  gap: 5px;
+}
+.contact-flex form label button {
+  font-size: 2rem;
+  color: var(--white);
+  width: inherit;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  background-color: var(--buttonColor);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+  .top-title {
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .top {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+  }
+  .top-title {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .top-title h3 {
+    font-size: 3rem;
+  }
+  .top-img {
+    display: none;
+  }
+
+  /* Section cards */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
